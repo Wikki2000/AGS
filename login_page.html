@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/styles/0-login_page.css">
+    <script src="js/0-veify_password.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        😊 Welcome to AGS!
+    </header>
+    <div class="container">
+        <form action="php/welcome.php" method="post">
+            <h2 class="items">Login</h2>
+            <div class="email">
+                <input class="items" placeholder="Email" type="email" name="email">
+                <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="pwd">
+                <input class="items" placeholder="Password" type="password" name="pwd" id="pwd">
+                <a style="margin-left: 50%;" href="">Forgot Password?</a>
+                <i class="fas fa-eye" onclick="togglePassword('pwd', this)"></i>
+            </div>
+            <button type="submit" name="signup" class="items">Login</button>
+            <p class="items">
+                Don't have an account?
+                <a href="registration.html">Register</a>
+            </p>
+        </form>
+    </div>
+    <footer></footer>
+</body>
+</html>

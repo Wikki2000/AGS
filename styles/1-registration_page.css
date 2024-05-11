@@ -1,0 +1,46 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+span{
+    color: red;
+}
+button[type="submit"]{
+    border: none;
+    border-radius: 5px;
+}
+.form-group .form-control{
+    padding: 25px;
+    border: none;
+    background: #f1f1f1;
+}
+div[class="grp-btn"]{
+    display: flex;
+}
+.grp-btn .btn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+.btn:first-child{
+    background-color: red;
+}
+.container{
+    padding: 20px;
+}
+#psw1, #psw2{
+    position: relative;
+}
+.form-group i{
+    color: grey;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+}
+div[class="pwd-icon"]{
+    background-color: black;
+    color: blue;
+}

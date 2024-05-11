@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../images/login.png);
+    overflow: hidden;
+    color: aliceblue;
+}
+header{
+    border-bottom: 2px solid white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+i{
+    position: absolute;
+    top: 40%;
+    color: grey;
+    left: 230px;
+}
+.email, .pwd{
+    position: relative;
+}
+input[class="items"]{
+    box-shadow: 2px 2px lightblue;
+}
+.items{
+    margin: 10px;
+    width: 70%;
+    border-radius: 20px;
+    padding: 13px;
+    border: none;
+}
+button[class="items"]{
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+button:hover{
+    opacity: 0.7;
+}
