@@ -3,11 +3,16 @@
  * 
  * @returns {boolean} Returns true if passwords match, otherwise false.
  */
-function validatePassword () {
-    var pwd1 = document.getElementById("pwd1").value;
-    var pwd2 = document.getElementById("pwd2").value;
+function validatePassword(password1, password2) {
+    const pwd1 = document.getElementById(password1).value;
+    const pwd2 = document.getElementById(password2).value;
+    const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+    
     if (pwd1 !== pwd2) {
-        alert("Invalid password");
+        alert("Passwords must match");
+        return false;
+    } else if (!pattern.test(pwd1)) {
+        alert("Password must be at least 8 characters long.\nContain a lowercase letter, an uppercase letter.\nContain digit, and a special character.");
         return false;
     }
     return true;

@@ -1,46 +1,50 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
-span{
-    color: red;
+body .container{
+    border-radius: 10px;
+    background-color: rgb(245, 245, 240);
+    box-shadow: 5px 5px 3px rgb(178, 179, 180);
+    width: 50%;
+    margin-top: 80px;
 }
-button[type="submit"]{
+.container .form-control{
+    padding: 20px;
     border: none;
     border-radius: 5px;
 }
-.form-group .form-control{
-    padding: 25px;
-    border: none;
-    background: #f1f1f1;
-}
-div[class="grp-btn"]{
-    display: flex;
-}
-.grp-btn .btn{
-    background-color: #04AA6D;
-    color: white;
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-}
-.btn:first-child{
-    background-color: red;
-}
-.container{
-    padding: 20px;
-}
-#psw1, #psw2{
+.container .form-group{
     position: relative;
 }
-.form-group i{
-    color: grey;
-    position: absolute;
-    top: 50%;
-    right: 2%;
+button:hover{
+    opacity: 0.7;
 }
-div[class="pwd-icon"]{
-    background-color: black;
-    color: blue;
+.container .form-group .fa-envelope, .container .form-group .fa-eye{
+    position: absolute;
+    top: 65%;
+    left: 90%;
+    color: grey;
+}
+span{
+    color: red;
+    font-size: 20px;
+}
+#head{
+    border-bottom: 1px solid grey;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.container #head p{
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+.container #head h2{
+    text-align: center;
+}
+.container #form .grp-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/3-new_table.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/5-edit_table.css">
+    <title>Create Table</title>
+    <script>
+        $(document).ready(function () {
+            function get_feedback (form) {
+                $.ajax({
+                    url: "../back_end/create_table.php",
+                    method: "POST",
+                    data: $(form).serialize(), // Serialize the form data passed as an argument
+                    dataType: "json",
+                    success: function (response) {
+                        alert(response.message);
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Error: " + error);
+                    }
+                });
+            }
+        
+            $("#form").submit(function (event) {
+                event.preventDefault();
+                get_feedback($(this)); // Pass the form context to the function
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="../back_end/create_table.php" id="form" method="POST">
+            <input id="input" class="form-control" name="tableName" placeholder="Enter table name" required>
+            <button type="submit" id="createBtn" class="btn btn-primary">Create</button>
+        </form>
+        
+        <h2><strong>Create new student record table</strong></h2><br>
+
+        <div id="top">
+            <input class="form-control" name="tableName" placeholder="Search...">
+            <h3 id="tableName" style="text-align: center;"></h3>
+            
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Add student
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <form  method="post" action="../back_end/insert_data.php">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input class="form-control" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Reg.No</label>
+                                    <input class="form-control" name="regNo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Test</label>
+                                    <input class="form-control" name="test" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Exam</label>
+                                    <input class="form-control" name="exam" required>
+                                </div>
+
+                                <div class="grp-btn">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>Test score</th>
+                    <th>Exam Score</th>
+                    <th>Total score</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+        </table>
+
+        <tbody>
+            
+        </tbody>
+    </div>
+</body>
+</html>

@@ -1,47 +1,49 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-image: url(../images/login.png);
-    overflow: hidden;
-    color: aliceblue;
-}
-header{
-    border-bottom: 2px solid white;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    height: 500px;
+    margin: 90px;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 240);
+    box-shadow: 5px 5px 3px lightblue;
 }
-i{
-    position: absolute;
-    top: 40%;
-    color: grey;
-    left: 230px;
-}
-.email, .pwd{
-    position: relative;
-}
-input[class="items"]{
-    box-shadow: 2px 2px lightblue;
-}
-.items{
-    margin: 10px;
-    width: 70%;
-    border-radius: 20px;
-    padding: 13px;
+.container .form-control{
+    padding: 22px;
     border: none;
+    border-radius: 5px;
+
 }
-button[class="items"]{
-    background-color: white;
-    cursor: pointer;
-    color: black;
+.container .form-group{
+    position: relative;
+    width: 120%;
 }
 button:hover{
     opacity: 0.7;
+}
+.container .common button{
+    margin-top: 15px;
+    padding: 10px;
+}
+.container .form-group .fa-envelope, .container .form-group .fa-eye{
+    position: absolute;
+    top: 65%;
+    left: 90%;
+    color: grey;
+}
+
+.form-group .common .forget-pwd{
+    position: relative;
+}
+.container .forget-pwd a{
+    position: absolute;
+    right: 0;
+}
+span{
+    color: red;
+    font-size: 25px;
 }

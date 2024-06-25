@@ -1,0 +1,22 @@
+.container .section-1{
+    display: flex;
+    justify-content: space-around;
+}
+.container #top{
+    display: flex;
+    justify-content: space-between;
+}
+.container .form-control{
+    width: 200px;
+}
+.container #form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.container h2{
+    text-align: center;
+}
+.container #top #add{
+    height: 35px;
+}

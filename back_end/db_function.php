@@ -7,9 +7,9 @@
  * 
  * return: mysqli|false An object of mysqli on success, otherwise false
  */
-function connect_to_database($server_name, $user_name, $password)
+function connect_to_database($server_name, $user_name, $password, $db_name)
 {
-	$con = new mysqli($server_name, $user_name, $password); # create an obj of mysql
+	$con = new mysqli($server_name, $user_name, $password, $db_name); # create an obj of mysql
 
 	/* Check if connection was successful */
 	if ($con->connect_error)
@@ -105,5 +105,21 @@ function insert_data($table, $attributes, $values, $con)
 		return true;
 	else
 		exit("Error inserting data: {$stmt->error}");
+}
+/**
+ * get_table_rows: Filter rows base on an email
+ * @param object $con: An object of mysqli
+ * @param string $email: An email address use to filter
+ * 
+ * return: An array of the records if success else false
+ */
+function get_table_rows($con, $email)
+{
+    $sql = "SELECT * FROM `users` WHERE `email` = ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $row = $stmt->get_result()->fetch_assoc();
+	return ($row);
 }
 ?>

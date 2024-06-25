@@ -1,0 +1,15 @@
+#pop{
+    background-color: red;
+    width: 50%;
+}
+
+.container .modal-dialog div[class="modal-content"] {
+    width: 50%;
+}
+.container .modal-dialog .modal-body .form-group .form-control {
+    width: 100%;
+}
+.container .modal-dialog .modal-body .grp-btn {
+    display: flex;
+    justify-content: space-between;
+}

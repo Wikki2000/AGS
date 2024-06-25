@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/3-new_table.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/4-create_table.css">
+    <script src="../js/3-create_table.js"></script>
+    <title>Create Table</title>
+</head>
+<body>
+    <div class="container">
+        <header><h1 class="header"><strong>My table dashboard</strong></h1></header>
+        <div class="input-field">
+            <input class="form-control" name="tableName" placeholder="Search...">
+            <form action="../back_end/create_table.php" id="form" method="POST">
+                <input id="input" class="form-control" name="tableName" placeholder="Enter table name" required>
+                <button type="submit" id="createBtn" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+
+        <div class="body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Table name</th>
+                        <th>Handle operation on table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table body will be added from jQuery -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

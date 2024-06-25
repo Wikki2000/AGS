@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="../styles/2-dash_board.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/1-welcome_text.js"></script>
+    <title>Dash board</title>
+    <script>
+        $(document).ready(function () {
+            get_name();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a id="profile" href="edit_profile.html">
+            <i id="user-icon" class="fas fa-3x fa-user"></i>
+            <p>Edit profile</p>
+        </a>
+
+        <div id="header">
+            <a id="logout" href="../back_end/logout.php">Log out</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="welcome">
+            <i id="l-icon" class="fas fa-2x fa-user"></i><h4 id="welcome"></h4><i id="r-icon" class="fas fa-2x fa-user"></i>
+        </div>
+        <div class="btn">
+            <a href="create_table.html">My table</a>
+            <a href="edit_table.html">Edit table</a>
+            <a href="customize_table.html">Customize table</a>
+            <a href="print_table.html">Print table</a>
+        </div>
+    </div>
+</body>
+</html>
